@@ -6,10 +6,11 @@ import next from "../images/next.png"
 import tailwind from "../images/tailwind.png"
 
 
+
 export default function About(params) {
     return(
         <section id="about">
-        <div id="home" className="flex h-[40rem] justify-center items-center" style={{paddingTop:100}}>
+        <div id="home" className="flex h-[40rem] justify-center items-center" style={{paddingTop:200}}>
             <div className="mx-auto h-3/4 flex justify-center">
                     <div className="all-about">
                         <h1 className="ab-title">About Me</h1>

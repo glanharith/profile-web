@@ -1,28 +1,55 @@
 
 import Image from "next/image";
 import profilepict from "../images/profilepict.jpg"
+import { motion } from "framer-motion";
 
 export default function Home(params) {
     return(
-    <section id="home">
-        <div id="home" className="flex justify-center items-center" style={{paddingTop:50,paddingBottom:70}}>
-            <div className="mx-auto h-3/4">
-                 <div className="grid grid-cols-2 content-center">
-                    <div className="grid place-items-center">
-                        <Image src={profilepict}
-                        width={500}
-                        className="image-one"
-                        />
-                    </div>
-                    <div className="grid grid-cols-1 gap-4 content-center">
-                        <h1 className="name-header-top">Hi, I am</h1>
-                        <h1 className="name-header-bot">Glan Harith Teguh</h1>
-                        <h2 className="ab-header">Frontend Developer</h2>
-                    </div>
-
-                </div>
+        <section id="home">
+        <div
+          id="home"
+          className="flex justify-center items-center"
+          style={{ paddingTop: 100, paddingBottom: 170 }}
+        >
+          <div className="mx-auto h-3/4">
+            <div className="grid grid-cols-2 content-center">
+            <motion.div
+              className="grid place-items-center"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 6}}
+            >
+                <Image src={profilepict} width={500} className="image-one" />
+            </motion.div>
+              <div className="grid grid-cols-1 gap-4 content-center">
+                <motion.h1
+                  className="name-header-top"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 2 }}
+                >
+                  Hi, I am
+                </motion.h1>
+                <motion.h1
+                  className="name-header-bot"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 3 }}
+                >
+                  Glan Harith Teguh
+                </motion.h1>
+                <motion.h2
+                  className="ab-header"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 5 }}
+                >
+                  Frontend Developer
+                </motion.h2>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </section>
     )
 }
